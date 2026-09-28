@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>First Year Student Guide</title>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f4f1fb;--sf:#fff;--ink:#211c33;--mu:#5f5978;--ln:#dcd5ee;--p:#5b3fa0;--ps:#ece6fa;--t:#178a82;--r:#c8456b;--a:#e6a616;--g:#3f9a34;--on:#fff;--hero:#2a1d5c;--map:#efeaf9;--road:#fff;--display:'Bricolage Grotesque',system-ui,sans-serif;--body:'Figtree',system-ui,sans-serif;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#13101d;--sf:#1e1a2e;--ink:#f0ebff;--mu:#aaa3c6;--ln:#393253;--p:#b9a4ff;--ps:#2a2344;--t:#55cbc2;--r:#ff8fb0;--a:#f2c04c;--g:#8fd47b;--on:#15121f;--hero:#1e1640;--map:#241f3a;--road:#342d52}}
+:root[data-theme="dark"]{--bg:#13101d;--sf:#1e1a2e;--ink:#f0ebff;--mu:#aaa3c6;--ln:#393253;--p:#b9a4ff;--ps:#2a2344;--t:#55cbc2;--r:#ff8fb0;--a:#f2c04c;--g:#8fd47b;--on:#15121f;--hero:#1e1640;--map:#241f3a;--road:#342d52}
+html{scroll-behavior:smooth;height:100%}*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:1.0625rem/1.55 var(--body)}
+h1,h2,h3{font-family:var(--display);margin:0;line-height:1.1}
+button{font:inherit;color:inherit;cursor:pointer}
+:focus-visible{outline:3px solid var(--a);outline-offset:2px}
+.w{max-width:1040px;margin:0 auto;padding:0 18px}
+.hero{background:var(--hero);color:#fff;padding:52px 0 96px}
+.college{display:inline-block;border:1.5px solid #6d5cb0;border-radius:99px;padding:4px 16px;margin-bottom:18px;font-weight:600;color:#e3dcff}
+.hero h1{font-size:clamp(2.6rem,8vw,5rem);font-weight:800;letter-spacing:-.02em}
+.hero p{max-width:50ch;font-size:1.2rem;color:#cfc6ee;margin:16px 0 26px}
+.cta{display:inline-block;background:var(--a);color:#2b2200;font-weight:600;padding:13px 26px;border-radius:12px;text-decoration:none}
+.tags{display:flex;gap:8px;margin-top:26px;flex-wrap:wrap}.tags span{border:1.5px solid #6d5cb0;border-radius:99px;padding:3px 14px;font-size:.95rem;color:#e3dcff}
+#app{margin-top:-64px}
+.shell{background:var(--sf);border:2px solid var(--ln);border-radius:22px;box-shadow:0 18px 50px rgba(40,20,90,.18);overflow:hidden}
+.top{display:flex;gap:12px;align-items:center;padding:14px 16px;border-bottom:1px solid var(--ln)}
+.top b{font-family:var(--display);font-size:1.15rem;color:var(--p);white-space:nowrap}
+.sw{position:relative;flex:1}
+.sw input{width:100%;font:inherit;padding:11px 14px;border-radius:12px;border:2px solid var(--ln);background:var(--bg);color:var(--ink)}
+.res{position:absolute;left:0;right:0;top:100%;margin-top:6px;background:var(--sf);border:2px solid var(--p);border-radius:12px;z-index:9;max-height:300px;overflow:auto}
+.res button{display:block;width:100%;text-align:left;background:none;border:0;padding:10px 14px;border-bottom:1px solid var(--ln)}
+.res button:hover{background:var(--ps)}.res small{color:var(--mu);display:block}
+.tabs{display:flex;gap:4px;overflow-x:auto;padding:10px 12px;border-bottom:1px solid var(--ln);scrollbar-width:thin}
+.tab{flex:none;border:0;background:none;padding:8px 14px;border-radius:99px;font-weight:600;color:var(--mu);white-space:nowrap}
+.tab:hover{background:var(--ps)}.tab[aria-selected=true]{background:var(--p);color:var(--on)}
+main{padding:24px 20px 30px;min-height:460px}
+main h2{font-size:1.9rem;color:var(--p);margin-bottom:4px}.lead{color:var(--mu);margin:0 0 20px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px}
+.card{background:var(--bg);border:2px solid var(--ln);border-radius:14px;padding:16px}
+.card h3{font-size:1.1rem;margin-bottom:4px}.card p{margin:0;color:var(--mu);font-size:.95rem}
+.q{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px;margin:18px 0}
+.q button{background:var(--ps);border:2px solid transparent;border-radius:14px;padding:16px 10px;font-weight:600;text-align:center}
+.q button:hover{border-color:var(--p)}.q i{display:block;font-style:normal;font-size:1.7rem;margin-bottom:4px}
+.home{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.ring{--v:0;width:76px;height:76px;border-radius:50%;background:conic-gradient(var(--g) calc(var(--v)*1%),var(--ln) 0);display:grid;place-items:center;flex:none}
+.ring span{width:58px;height:58px;border-radius:50%;background:var(--bg);display:grid;place-items:center;font:800 1rem var(--display)}
+.pr{display:flex;gap:14px;align-items:center;margin-bottom:12px}
+.ck{display:flex;gap:10px;align-items:flex-start;padding:9px 0;border-top:1px solid var(--ln);cursor:pointer}
+.ck input{width:20px;height:20px;accent-color:var(--g);margin-top:2px;flex:none}
+.ck input:checked+span{text-decoration:line-through;color:var(--mu)}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px}
+.chip{border:2px solid var(--ln);background:none;border-radius:99px;padding:5px 14px;font-weight:500}
+.chip[aria-pressed=true]{background:var(--p);border-color:var(--p);color:var(--on)}
+.map{display:grid;grid-template-columns:1.6fr 1fr;gap:18px}
+svg{width:100%;height:auto;display:block;border-radius:14px;background:var(--map)}
+.bd{cursor:pointer}.bd rect{stroke:var(--ink);stroke-width:1.5;transition:.15s}.bd:hover rect,.bd:focus rect{stroke-width:4}
+.bd text{font:600 12px var(--body);fill:#211c33;pointer-events:none}
+.bd.on rect{stroke:var(--r);stroke-width:5}
+.badge{display:inline-block;border-radius:99px;padding:2px 10px;font-size:.85rem;font-weight:600}
+.open{background:color-mix(in srgb,var(--g) 22%,transparent);color:var(--g)}.shut{background:color-mix(in srgb,var(--r) 20%,transparent);color:var(--r)}
+.row{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.step{display:flex;gap:12px;padding:12px 0;border-top:1px solid var(--ln)}
+.bar{height:10px;border-radius:9px;background:var(--ln);margin:6px 0 14px;overflow:hidden}.bar i{display:block;height:100%;background:var(--g);transition:width .3s}
+details{background:var(--bg);border:2px solid var(--ln);border-radius:12px;padding:12px 16px;margin-bottom:10px}
+summary{font-weight:600;cursor:pointer}details p{margin:8px 0 0;color:var(--mu)}
+.sos{display:flex;justify-content:space-between;align-items:center;gap:12px;background:var(--bg);border:2px solid var(--r);border-radius:14px;padding:14px 18px;margin-bottom:10px;text-decoration:none;color:var(--ink)}
+.sos b{font:800 1.5rem var(--display);color:var(--r)}
+.btn{background:var(--p);color:var(--on);border:0;border-radius:10px;padding:8px 16px;font-weight:600}
+.btn.o{background:none;color:var(--p);border:2px solid var(--p)}
+.note{font-size:.88rem;color:var(--mu);margin-top:18px}
+section.s{padding:52px 0}
+.steps{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-top:18px}
+.steps div{background:var(--sf);border:2px solid var(--ln);border-radius:14px;padding:14px;font-size:.95rem}
+.steps b{display:block;font-family:var(--display);color:var(--p);font-size:1.1rem}
+.stats{display:flex;gap:26px;flex-wrap:wrap;margin-top:20px}.stats div{color:var(--mu)}.stats b{font:800 2.4rem var(--display);color:var(--p);margin-right:8px}
+h2.big{font-size:2rem;color:var(--p)}
+footer{text-align:center;padding:10px 20px 60px;font:600 1.3rem var(--display);color:var(--p)}
+@media (max-width:820px){.home,.map{grid-template-columns:1fr}.steps{grid-template-columns:1fr 1fr}.top b{display:inline}}
+@media (max-width:520px){.steps{grid-template-columns:1fr}main{padding:20px 14px}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+</style></head><body>
+<header class="hero"><div class="w">
+<div class="college">Bharati Vidyapeeth College of Engineering</div>
+<h1>First Year<br>Student Guide</h1>
+<p>Everything you need on campus, in one place. Find your way, meet the people, and get things done from day one.</p>
+<a class="cta" href="#app">Open the guide</a>
+<div class="tags"><span>Explore</span><span>Learn</span><span>Grow</span></div>
+</div></header>
+
+<div class="w" id="app"><div class="shell">
+<div class="top"><b>BVCOE Guide</b><div class="sw"><input id="q" type="search" placeholder="Search rooms, people, forms, clubs…" aria-label="Search the guide" autocomplete="off"><div class="res" id="res" hidden></div></div></div>
+<div class="tabs" role="tablist" id="tabs"></div>
+<main id="main" tabindex="-1"></main>
+</div></div>
+
+<section class="s"><div class="w">
+<h2 class="big">How we built it</h2>
+<p class="lead">A short look at our design thinking process.</p>
+<div class="steps">
+<div><b>Empathize</b>Interviewed 12 first-year students.</div>
+<div><b>Define</b>Students lack one simple source of college information.</div>
+<div><b>Ideate</b>Compared an app, QR guide, handbook and website. Chose a web guide.</div>
+<div><b>Prototype</b>Low-fidelity screens, then the guide you just used.</div>
+<div><b>Test</b>8 students tried it. It was helpful and easy to navigate.</div></div>
+<div class="stats"><div><b>12</b>interviews</div><div><b>7</b>core screens</div><div><b>8</b>testers</div></div>
+<p class="lead" style="margin-top:22px">Impact: saves time, builds independence, improves the first-year experience and connects the campus community.</p>
+</div></section>
+<footer>"Helping Freshers Today, Building Leaders Tomorrow!"<br><small style="font:400 .9rem var(--body);color:var(--mu)">Bharati Vidyapeeth College of Engineering</small></footer>
+
+<script>
+var $=function(s){return document.querySelector(s)};
+var TABS=[["home","🏠","Home"],["map","📍","Campus Map"],["faculty","👤","Faculty"],["offices","🏛️","Offices"],["academic","📖","Academics"],["proc","📋","Procedures"],["events","⭐","Clubs & Events"],["faq","❓","FAQ"],["sos","🚨","Emergency"]];
+var B=[["main","Main Building",60,70,150,90,"#f2c46d","Admissions, accounts and the principal's office.","Ground: Admissions · 1st: Accounts"],["lib","Library",250,50,120,80,"#8fd0c9","Books, reading hall and study rooms.","Ground: Reading hall · 1st: Study rooms"],["labs","Labs Block",410,70,130,90,"#b9a4ff","Computer and science labs.","Ground: Science labs · 1st: Computer labs"],["aud","Auditorium",60,210,110,80,"#ff9fb8","Orientation and big events.","Main hall, seats about 500"],["can","Canteen",210,215,110,70,"#f5a97a","Meals, snacks and a place to meet friends.","Open through lunch"],["hos","Hostel",360,215,90,75,"#a5d68f","Rooms for outstation students.","Warden office at entrance"],["spo","Sports Ground",470,205,90,100,"#cfe6a0","Cricket, football and the gym.","Gym inside the pavilion"]];
+var F=[["Dr. Name Surname","Computer","Room 204"],["Prof. Name Surname","Computer","Room 210"],["Dr. Name Surname","Mechanical","Room 105"],["Prof. Name Surname","Electronics","Room 312"],["Dr. Name Surname","Civil","Room 118"],["Prof. Name Surname","Mathematics","Room 301"]];
+var O=[["Admissions office","Fees, documents and admission queries","Main Building, ground floor",9,17],["Exam cell","Timetables, hall tickets and results","Main Building, 1st floor",10,16],["Student affairs","Clubs, events and general help","Auditorium wing",9,17],["Library desk","Borrowing and membership","Library, ground floor",8,19]];
+var A=[["Term begins","Add date"],["Orientation week","Add date"],["Internal exams","Add date"],["Semester exams","Add date"]];
+var P=[["Pay the admission fee",["Collect the fee slip from the Admissions office.","Check the amount with the accounts desk.","Pay at the counter or online.","Keep the receipt safe."]],["Get your ID card",["Fill in the ID card form.","Attach a passport photo and a copy of your admission receipt.","Submit at Student affairs.","Collect the card after the notified date."]],["Apply for a certificate",["Pick the certificate you need.","Fill in the request form.","Submit it at the Admissions office.","Collect it on the date they give you."]]];
+var E=[["Coding Club","Technical","Weekly meetups and hack nights."],["Robotics Club","Technical","Build and test robots."],["Dance Club","Cultural","Practice and performances."],["Music Club","Cultural","Jam sessions and open mics."],["Football","Sports","Evening practice at the ground."],["Orientation Day","Events","Meet seniors and staff."]];
+var Q=[["Where do I get my timetable?","Check Academics, or ask the Exam cell in the Main Building."],["Who do I ask about fees?","The Admissions office. See Procedures for the steps."],["How do I join a club?","Open Clubs & Events, tap Interested, then visit Student affairs."],["I can't find a classroom.","Use the Campus Map to find the building, then ask at its ground floor."],["Who do I call in an emergency?","Open Emergency for one-tap numbers."]];
+var S=[["Campus security","Add number","Gate 1"],["Medical room","Add number","Main Building"],["Helpline","Add number","Student affairs"]];
+var CL=["Collect your ID card","Pay the admission fee","Find your classroom on the map","Save the emergency numbers","Join a club","Meet your class mentor"];
+var st={v:"home",b:"main",dept:"All",club:"All",p:0,ck:{},it:{}};
+try{st.ck=JSON.parse(localStorage.getItem("fysg")||"{}")}catch(e){}
+function sv(){try{localStorage.setItem("fysg",JSON.stringify(st.ck))}catch(e){}}
+function chips(list,cur,k){return '<div class="chips">'+list.map(function(x){return '<button class="chip" aria-pressed="'+(x==cur)+'" data-a="'+k+'" data-v="'+x+'">'+x+'</button>'}).join("")+'</div>'}
+function isOpen(o){var d=new Date(),h=d.getHours();return d.getDay()!=0&&h>=o[3]&&h<o[4]}
+function pct(){var n=0;CL.forEach(function(c,i){if(st.ck["c"+i])n++});return Math.round(n*100/CL.length)}
+var V={
+home:function(){var p=pct();return '<h2>Start here</h2><p class="lead">Your first week, sorted.</p><div class="home"><div class="card"><div class="pr"><div class="ring" style="--v:'+p+'"><span>'+p+'%</span></div><div><h3>First-week checklist</h3><p>Tick things off as you go.</p></div></div>'+CL.map(function(c,i){return '<label class="ck"><input type="checkbox" data-a="ck" data-v="c'+i+'"'+(st.ck["c"+i]?" checked":"")+'><span>'+c+'</span></label>'}).join("")+'</div><div><h3 style="margin-bottom:6px">Jump to</h3><div class="q" style="margin-top:0">'+TABS.slice(1).map(function(t){return '<button data-a="go" data-v="'+t[0]+'"><i>'+t[1]+'</i>'+t[2]+'</button>'}).join("")+'</div></div></div>'},
+map:function(){var s=B.filter(function(b){return b[0]==st.b})[0],cx=s[2]+s[4]/2,cy=s[3]+s[5]/2;
+return '<h2>Campus map</h2><p class="lead">Tap a building. The dashed line shows the way from the main gate.</p><div class="map"><svg viewBox="0 0 600 340" role="img" aria-label="Campus map"><path d="M0 190H600M300 190V340M220 40V190M400 40V190" stroke="var(--road)" stroke-width="22" fill="none"/><path d="M300 320V'+(cy>190?190:cy)+(cy>190?'H'+cx+'V'+cy:'H'+cx+'V'+cy)+'" stroke="var(--r)" stroke-width="4" stroke-dasharray="8 6" fill="none"/><circle cx="300" cy="322" r="9" fill="var(--r)"/><text x="316" y="327" style="font:600 12px var(--body);fill:var(--ink)">Main gate</text>'+B.map(function(b){return '<g class="bd'+(b[0]==st.b?" on":"")+'" tabindex="0" role="button" aria-label="'+b[1]+'" data-a="bd" data-v="'+b[0]+'"><rect x="'+b[2]+'" y="'+b[3]+'" width="'+b[4]+'" height="'+b[5]+'" rx="10" fill="'+b[6]+'"/><text x="'+(b[2]+b[4]/2)+'" y="'+(b[3]+b[5]/2+4)+'" text-anchor="middle">'+b[1]+'</text></g>'}).join("")+'</svg><div class="card"><h3>'+s[1]+'</h3><p>'+s[7]+'</p><p style="margin-top:10px"><b>Inside:</b> '+s[8]+'</p></div></div><p class="note">Sample layout. The final guide will use your real campus plan.</p>'},
+faculty:function(){var d=["All"].concat(F.map(function(f){return f[1]}));return '<h2>Faculty</h2><p class="lead">Find who to meet and where.</p>'+chips(d.filter(function(x,i){return d.indexOf(x)==i}),st.dept,"dept")+'<div class="grid">'+F.filter(function(f){return st.dept=="All"||f[1]==st.dept}).map(function(f){return '<div class="card"><h3>'+f[0]+'</h3><p>'+f[1]+' department</p><p><b>'+f[2]+'</b></p></div>'}).join("")+'</div><p class="note">Sample names. Replace with your faculty list.</p>'},
+offices:function(){return '<h2>Offices</h2><p class="lead">Who handles what, and whether they are open right now.</p><div class="grid">'+O.map(function(o){var op=isOpen(o);return '<div class="card"><div class="row"><h3>'+o[0]+'</h3><span class="badge '+(op?"open":"shut")+'">'+(op?"Open now":"Closed")+'</span></div><p>'+o[1]+'</p><p style="margin-top:8px"><b>'+o[2]+'</b><br>'+o[3]+':00 to '+o[4]+':00, Mon to Sat</p></div>'}).join("")+'</div><p class="note">Sample hours. Open status uses your device clock.</p>'},
+academic:function(){return '<h2>Academics</h2><p class="lead">Key dates and rules in one view.</p><div class="grid">'+A.map(function(a){return '<div class="card"><h3>'+a[0]+'</h3><p>'+a[1]+'</p></div>'}).join("")+'</div><div class="card" style="margin-top:12px"><h3>Attendance</h3><p>Check the minimum attendance rule with your department before exams.</p></div><p class="note">Sample. Add your college calendar.</p>'},
+proc:function(){var p=P[st.p],n=0;p[1].forEach(function(s,i){if(st.ck["p"+st.p+"-"+i])n++});var w=n*100/p[1].length;return '<h2>Procedures</h2><p class="lead">Pick a task and follow the steps.</p>'+chips(P.map(function(x){return x[0]}),p[0],"proc")+'<div class="row"><b>'+n+' of '+p[1].length+' steps done</b></div><div class="bar"><i style="width:'+w+'%"></i></div>'+p[1].map(function(s,i){return '<label class="step"><input type="checkbox" style="width:20px;height:20px;accent-color:var(--g)" data-a="ck" data-v="p'+st.p+'-'+i+'"'+(st.ck["p"+st.p+"-"+i]?" checked":"")+'><span>'+s+'</span></label>'}).join("")},
+events:function(){var c=["All","Technical","Cultural","Sports","Events"];return '<h2>Clubs & events</h2><p class="lead">Find your people.</p>'+chips(c,st.club,"club")+'<div class="grid">'+E.filter(function(e){return st.club=="All"||e[1]==st.club}).map(function(e){var on=st.it[e[0]];return '<div class="card"><h3>'+e[0]+'</h3><p>'+e[2]+'</p><p style="margin:10px 0"><span class="badge open">'+e[1]+'</span></p><button class="btn'+(on?"":" o")+'" data-a="it" data-v="'+e[0]+'">'+(on?"Interested ✓":"Interested")+'</button></div>'}).join("")+'</div>'},
+faq:function(){return '<h2>FAQ</h2><p class="lead">The questions everyone has. No question is too basic.</p>'+Q.map(function(q){return '<details><summary>'+q[0]+'</summary><p>'+q[1]+'</p></details>'}).join("")},
+sos:function(){return '<h2>Emergency</h2><p class="lead">Tap to call.</p><a class="sos" href="tel:112"><div><h3>National emergency</h3><p>Police, fire, ambulance</p></div><b>112</b></a><a class="sos" href="tel:108"><div><h3>Ambulance</h3><p>Medical emergency</p></div><b>108</b></a>'+S.map(function(s){return '<div class="sos"><div><h3>'+s[0]+'</h3><p>'+s[2]+'</p></div><b style="font-size:1rem">'+s[1]+'</b></div>'}).join("")+'<p class="note">Add your campus numbers before the review.</p>'}};
+function draw(){$("#tabs").innerHTML=TABS.map(function(t){return '<button class="tab" role="tab" aria-selected="'+(t[0]==st.v)+'" data-a="go" data-v="'+t[0]+'">'+t[1]+" "+t[2]+'</button>'}).join("");$("#main").innerHTML=V[st.v]()}
+function go(v){st.v=v;draw()}
+document.addEventListener("click",function(e){var t=e.target.closest("[data-a]");if(!t){if(!e.target.closest(".sw"))$("#res").hidden=true;return}
+var a=t.dataset.a,v=t.dataset.v;
+if(a=="ck"){st.ck[v]=t.checked;sv();var y=window.scrollY;draw();return}
+if(a=="go"){go(v);$("#res").hidden=true;return}
+if(a=="bd")st.b=v;if(a=="dept")st.dept=v;if(a=="club")st.club=v;if(a=="proc")st.p=P.map(function(x){return x[0]}).indexOf(v);if(a=="it")st.it[v]=!st.it[v];
+if(a=="sr"){var p=v.split("|");st.b=p[1]||st.b;go(p[0]);$("#res").hidden=true;$("#q").value="";$("#main").focus();return}
+draw()});
+document.addEventListener("keydown",function(e){if((e.key=="Enter"||e.key==" ")&&e.target.classList.contains("bd")){e.preventDefault();e.target.dispatchEvent(new MouseEvent("click",{bubbles:true}))}});
+var IX=[];B.forEach(function(b){IX.push([b[1],"Campus map","map|"+b[0]])});F.forEach(function(f){IX.push([f[0]+", "+f[1],f[2],"faculty"])});O.forEach(function(o){IX.push([o[0],o[1],"offices"])});P.forEach(function(p){IX.push([p[0],"Procedure","proc"])});E.forEach(function(x){IX.push([x[0],x[1],"events"])});Q.forEach(function(x){IX.push([x[0],"FAQ","faq"])});S.forEach(function(x){IX.push([x[0],"Emergency","sos"])});
+$("#q").addEventListener("input",function(e){var k=e.target.value.toLowerCase().trim(),r=$("#res");if(!k){r.hidden=true;return}
+var m=IX.filter(function(x){return (x[0]+" "+x[1]).toLowerCase().indexOf(k)>-1}).slice(0,7);
+r.innerHTML=m.length?m.map(function(x){return '<button data-a="sr" data-v="'+x[2]+'">'+x[0]+'<small>'+x[1]+'</small></button>'}).join(""):'<button disabled>No match. Try a building, name or form.</button>';r.hidden=false});
+draw();
+</script></body></html>
